@@ -22,10 +22,10 @@ def generate(score, players):
         great.append(players[rankup])
         less.append(players[rankdown])
         #keep going forward/backward from position of player and store the rest of the players in that rank
-        while players[rankup][1] = players[rankup+1][1]:
+        while players[rankup][1] == players[rankup+1][1]:
             rankup += 1
             great.append(players[rankup])
-        while players[rankdown][1] = players[rankdown-1][1]:
+        while players[rankdown][1] == players[rankdown-1][1]:
             rankdown -= 1
             less.append(players[rankdown])
     print("5 Ranks Above:")
