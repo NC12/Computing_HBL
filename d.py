@@ -1,17 +1,11 @@
-#(d)
 def locate(elements, username, target, low, high):
     mid = (low + high) // 2
     if low == high:
-        if username < elements[mid][0]:
-            if low != 0:
-                low -= 1
-        else:
+        if username > elements[mid][0]:
             low += 1
         return low
     elif elements[mid][1] == target:
-        if username < elements[mid][0]:
-            mid -= 1
-        else:
+        if username > elements[mid][0]:
             mid += 1
         return mid
     elif target < elements[mid][1]:
